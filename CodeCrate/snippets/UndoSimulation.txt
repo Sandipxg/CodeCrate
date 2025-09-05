@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class UndoSimulation {
+    public static void main(String[] args) {
+        Stack<String> actions = new Stack<>();
+        actions.push("Typed 'Hello'");
+        actions.push("Bolded text");
+        actions.push("Added image");
+
+        System.out.println("Undoing: " + actions.pop());
+        System.out.println("Undoing: " + actions.pop());
+        System.out.println("Remaining actions: " + actions);
+    }
+}

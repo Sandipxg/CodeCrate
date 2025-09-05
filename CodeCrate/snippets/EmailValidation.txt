@@ -1,0 +1,18 @@
+public class EmailValidation {
+    public static boolean isValidEmail(String email) {
+        if (email == null || !email.contains("@") || !email.contains(".")) return false;
+
+        int atPos = email.indexOf('@');
+        int dotPos = email.lastIndexOf('.');
+
+        // '@' should come before last '.'
+        if (atPos < 1 || dotPos < atPos + 2 || dotPos >= email.length() - 1) return false;
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isValidEmail("test@mail.com")); // true
+        System.out.println(isValidEmail("mail.com"));      // false
+    }
+}

@@ -1,0 +1,15 @@
+import java.util.LinkedList;
+
+public class PalindromeLinkedList {
+    public static void main(String[] args) {
+        LinkedList<Character> list = new LinkedList<>();
+        String str = "madam";
+
+        for (char c : str.toCharArray()) list.add(c);
+
+        LinkedList<Character> reverse = new LinkedList<>(list);
+        java.util.Collections.reverse(reverse);
+
+        System.out.println(list.equals(reverse) ? "Palindrome" : "Not Palindrome");
+    }
+}

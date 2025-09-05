@@ -1,0 +1,25 @@
+class InsufficientBalanceException extends Exception {
+    public InsufficientBalanceException(String msg) {
+        super(msg);
+    }
+}
+
+public class ATMWithdrawal {
+    private double balance = 5000;
+
+    public void withdraw(double amount) throws InsufficientBalanceException {
+        if (amount > balance) throw new InsufficientBalanceException("Insufficient funds!");
+        balance -= amount;
+        System.out.println("Withdrawal successful! Remaining balance: " + balance);
+    }
+
+    public static void main(String[] args) {
+        ATMWithdrawal atm = new ATMWithdrawal();
+        try {
+            atm.withdraw(2000);
+            atm.withdraw(4000); // Will throw exception
+        } catch (InsufficientBalanceException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
