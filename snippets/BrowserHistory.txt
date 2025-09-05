@@ -1,0 +1,22 @@
+import java.util.LinkedList;
+
+public class BrowserHistory {
+    public static void main(String[] args) {
+        LinkedList<String> history = new LinkedList<>();
+
+        // Visiting websites
+        history.add("Google");
+        history.add("YouTube");
+        history.add("StackOverflow");
+
+        System.out.println("History: " + history);
+
+        // Go back
+        System.out.println("Going back to: " + history.get(history.size() - 2));
+
+        // Clear last visited site
+        history.removeLast();
+
+        System.out.println("Updated History: " + history);
+    }
+}

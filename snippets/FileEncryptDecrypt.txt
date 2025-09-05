@@ -1,0 +1,31 @@
+import java.io.*;
+
+public class FileEncryptDecrypt {
+    public static void encrypt(String input, String output, int shift) throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader(input));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(output))) {
+
+            int ch;
+            while ((ch = br.read()) != -1) {
+                bw.write(ch + shift); // simple encryption
+            }
+        }
+    }
+
+    public static void decrypt(String input, String output, int shift) throws IOException {
+        try (BufferedReader br = new BufferedReader(new FileReader(input));
+             BufferedWriter bw = new BufferedWriter(new FileWriter(output))) {
+
+            int ch;
+            while ((ch = br.read()) != -1) {
+                bw.write(ch - shift); // simple decryption
+            }
+        }
+    }
+
+    public static void main(String[] args) throws IOException {
+        encrypt("input.txt", "encrypted.txt", 3);
+        decrypt("encrypted.txt", "decrypted.txt", 3);
+        System.out.println("Encryption & Decryption done!");
+    }
+}

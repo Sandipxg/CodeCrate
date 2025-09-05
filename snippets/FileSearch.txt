@@ -1,0 +1,21 @@
+import java.io.File;
+
+public class FileSearch {
+    public static void searchFile(File dir, String fileName) {
+        File[] files = dir.listFiles();
+        if (files == null) return;
+
+        for (File file : files) {
+            if (file.isDirectory()) {
+                searchFile(file, fileName);
+            } else if (file.getName().equalsIgnoreCase(fileName)) {
+                System.out.println("Found: " + file.getAbsolutePath());
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        File root = new File("C:\\"); // Change as per OS
+        searchFile(root, "data.txt");
+    }
+}
