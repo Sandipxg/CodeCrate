@@ -1,6 +1,0 @@
-kull,admin@gamil.com,admin
-kull,admin@gmail.com,admin
-admin1,admin1@gmail.com,123456
-sandip,admin2@gmail.com,sandip
-nishi,admin3@gmail.com,nishii
-srusti,srusti@gmail.com,123456
