@@ -23,7 +23,7 @@ public class ConnectionToAPI {
         conn.setRequestMethod("POST");
         conn.setRequestProperty("Content-Type", "application/json");
       //  conn.setRequestProperty("X-RapidAPI-Key", "5dd371ec26mshb4e029d3ef5ccedp17c05djsn057a468432bc");
-        conn.setRequestProperty("X-RapidAPI-Key", "e194997bbcmsh1bb06a7f3c17a8bp14bb7fjsn4de844570d68");
+        conn.setRequestProperty("X-RapidAPI-Key", " "); // insert your api key here from judge0
         conn.setRequestProperty("X-RapidAPI-Host", "judge0-ce.p.rapidapi.com");
         conn.setDoOutput(true);
 
@@ -121,4 +121,5 @@ public class ConnectionToAPI {
                 + "\"language_id\": 62,"
                 + "\"source_code\": " + "\"" + code.replace("\\", "\\\\").replace("\"", "\\\"").replace("\n", "\\n") + "\""
                 + "}";
+
  */
