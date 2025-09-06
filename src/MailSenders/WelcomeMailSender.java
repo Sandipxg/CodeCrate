@@ -8,7 +8,7 @@ public class WelcomeMailSender {
 
     public static void sendWelcomeMail(String toEmail, String userName) throws MessagingException {
         final String fromEmail = "MailGatewaySolution@gmail.com"; // your Gmail
-        final String password = "aous cree xdrn qmmt";            // app password from Google
+        final String password = " ";            // app password from Google
 
         // SMTP server configuration
         Properties props = new Properties();
@@ -44,3 +44,4 @@ public class WelcomeMailSender {
         System.out.println("✅ Plain text email sent successfully!");
     }
 }
+
