@@ -14,7 +14,7 @@ public class SendAttachment {
             throws MessagingException, IOException {
 
         final String fromEmail = "MailGatewaySolution@gmail.com";
-        final String password = "aous cree xdrn qmmt";
+        final String password = " ";
 
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
@@ -54,3 +54,4 @@ public class SendAttachment {
     }
 
 }
+
