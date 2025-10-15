@@ -1,2 +1,1 @@
-# CodeCrate
-The Devlopers kit
+
