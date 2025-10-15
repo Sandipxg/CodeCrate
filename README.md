@@ -62,10 +62,3 @@ git clone https://github.com/Sandipxg/CodeCrate.git
 4. **Run the application**
 - Launch `ApplicationStart` using your preferred Java IDE
 
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
-
-## License
-
-This project is open source. See the repository for license details.
